@@ -8,7 +8,7 @@ pipeline {
                     if [ -d .git ]; then
                         echo "Repository already exists; skipping clone."
                     else
-                        git clone --branch main https://github.com/devShaik010/Ci-cd.git .
+                        git clone --branch main https://github.com/Engg-Sayed-Abdul-Qayum/CI-CD.git .
                     fi
                 '''
             }
