@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Stop Existing Container') {
+            steps {
+                sh '''
+                    if [ -n "$(docker ps -aq --filter "name=^ci-cd-demo$")" ]; then
+                        docker stop ci-cd-demo
+                        docker rm ci-cd-demo
+                    else
+                        echo "No existing ci-cd-demo container found."
+                    fi
+                '''
+            }
+        }
+
+        stage('Start Container on Port 8082') {
+            steps {
+                sh 'docker run -d --name ci-cd-demo -p 8082:80 my-image:latest'
+            }
+        }
+    }
+}

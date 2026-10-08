@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                sh '''
+                    if [ -d .git ]; then
+                        echo "Repository already exists; skipping clone."
+                    else
+                        git clone --branch main https://github.com/devShaik010/Ci-cd.git .
+                    fi
+                '''
+            }
+        }
+
+        stage('Docker Image Build') {
+            steps {
+                sh 'docker build -t my-image:latest .'
+            }
+        }
+    }
+}
