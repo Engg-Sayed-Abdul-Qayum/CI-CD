@@ -344,4 +344,4 @@ docker stop ci-cd-demo && docker rm ci-cd-demo
 
 **Engg. Sayed Abdul Qayum**
 - GitHub: [@Engg-Sayed-Abdul-Qayum](https://github.com/Engg-Sayed-Abdul-Qayum)
-- LinkedIn: [@Sayed-Abdul-Qayum](https://www.linkedin.com/in/sayed-abdul-qayum/?isSelfProfile=true))
+- LinkedIn: [@Sayed-Abdul-Qayum](https://www.linkedin.com/in/sayed-abdul-qayum/?isSelfProfile=true)
